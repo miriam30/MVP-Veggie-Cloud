@@ -1,20 +1,18 @@
-import React from 'react'
+import React from 'react';
 
-class Search extends React.Component {
+class Search extends React.Component{
   constructor(props){
     super(props);
-    this.state = {
-      input: ''
+    this.state={
+      search: ''+'vegan'
     }
-
+  }
   render(){
-    return (
-      <div>
-        Search: <input value={this.state.input}></input>
-      <button >Veggify!</button>
-      </div>
-    );
+    return(<div>
+      search: <input></input>
+    <button>Search Recipe!</button>
+    </div>)
   }
 }
-}
-export default Search;
+
+export default Search
