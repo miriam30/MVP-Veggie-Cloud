@@ -16,5 +16,19 @@ var selectAll = function(callback) {
     }
   });
 };
+var insertOne= function(url, name, callback){
+  connection.query('INSERT INTO list (url, name) VALUES (?,?)',
+  [url, name], (err, results)=>{
+    if(err){
+      console.log("insert error")
+      callback(err, null)
+    } else{
+      console.log(results);
+      callback(null, results)
+    }
+  }
+)
+}
 
 module.exports.selectAll = selectAll;
+module.exports.insertOne = insertOne

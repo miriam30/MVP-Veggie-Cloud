@@ -48,7 +48,7 @@ class App extends React.Component {
 
   render () {
     return (<div>
-      <h1>Recipe List</h1>
+      <h1>The Veg Cloud!</h1>
       <Search />
       <AddRecipe addRecipe={this.addRecipe}/>
       <RecipeList items={this.state.items}/>
