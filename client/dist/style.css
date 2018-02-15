@@ -1,0 +1,12 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: seagreen;
+  background-image: url("background.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+#css {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+}

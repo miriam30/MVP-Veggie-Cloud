@@ -2,7 +2,7 @@ import React from 'react';
 
 const RecipeListItem = (props) => (
   <div>
-    <a href={`https://${props.item.url}`}>{props.item.name}</a>
+    <a href={`${props.item.url}`}>{props.item.name}</a>
   </div>
 )
 
