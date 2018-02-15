@@ -12,6 +12,9 @@ class App extends React.Component {
       items: []
     }
   }
+  addRecipe(){
+    
+  }
 
   getRecipeList() {
     $.ajax({
