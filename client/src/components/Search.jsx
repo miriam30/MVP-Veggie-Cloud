@@ -9,7 +9,7 @@ class Search extends React.Component{
   }
   render(){
     return(<div>
-      search: <input></input>
+      Search: <input></input>
     <button>Search Recipe!</button>
     </div>)
   }

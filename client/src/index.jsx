@@ -11,9 +11,21 @@ class App extends React.Component {
     this.state = {
       items: []
     }
+    this.addRecipe = this.addRecipe.bind(this);
+    this.getRecipeList = this.getRecipeList.bind(this);
   }
-  addRecipe(){
-    
+  addRecipe(url, name){
+    $.ajax({
+      method:'POST',
+      url:'/recipelist',
+      contentType:'application/json',
+      data:JSON.stringify({
+        url: url,
+        name: name
+      })
+    }).done(() => {
+      this.getRecipeList();
+    });
   }
 
   getRecipeList() {
@@ -38,7 +50,7 @@ class App extends React.Component {
     return (<div>
       <h1>Recipe List</h1>
       <Search />
-      <AddRecipe />
+      <AddRecipe addRecipe={this.addRecipe}/>
       <RecipeList items={this.state.items}/>
     </div>)
   }

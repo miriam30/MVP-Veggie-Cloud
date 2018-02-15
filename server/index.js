@@ -21,12 +21,12 @@ app.get('/recipelist', function (req, res) {
 //post requests to recipelist
 app.post('/recipelist', function(req, res){
   var url = req.body.url;
-  var description = req.body.description;
-  if(!description){
+  var name = req.body.name;
+  if(!name){
     console.log('post request error');
     res.sendStatus(400);
   }else {
-    database.insertOne(url, description, (err, results) =>{
+    database.insertOne(url, name, (err, results) =>{
       if(err){
         console.log('error in insertOne()');
         res.sendStatus(500)

@@ -5,16 +5,36 @@ class AddRecipe extends React.Component{
     super(props);
     this.state ={
       url:'',
-      description:''
+      name:''
     }
+    this.updateUrl=this.updateUrl.bind(this);
+    this.updateName=this.updateName.bind(this);
+    this.add=this.add.bind(this);
+  }
+  updateUrl(event){
+    this.setState({
+      url: event.target.value
+    })
+  }
+  updateName(event){
+    this.setState({
+      name: event.target.value
+    })
+  }
+  add(){
+    this.props.addRecipe(this.state.url, this.state.name);
+    this.setState({
+      url:'',
+      name:''
+    })
   }
 
   render(){
     return (<div>
-      url: <input></input>
+      url: <input onChange={this.updateUrl} value={this.state.url}></input>
     <br />
-    Description: <input></input>
-  <button>Add Recipe</button>
+    Name: <input onChange={this.updateName} value={this.state.name}></input>
+  <button onClick={this.add}>Add Recipe</button>
     </div>)
   }
 }
