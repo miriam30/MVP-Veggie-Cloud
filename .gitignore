@@ -28,5 +28,6 @@ client/dist/bundle.js
 node_modules/
 bower_components/
 passwords.js
+API.js
 
 client/.DS_Store

@@ -31,9 +31,10 @@ class AddRecipe extends React.Component{
 
   render(){
     return (<div>
-      url: <input onChange={this.updateUrl} value={this.state.url}></input>
+      Link: <input onChange={this.updateUrl} value={this.state.url}></input>
     <br />
     Name: <input onChange={this.updateName} value={this.state.name}></input>
+  <br />
   <button onClick={this.add}>Add Recipe</button>
     </div>)
   }

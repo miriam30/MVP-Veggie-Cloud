@@ -14,6 +14,7 @@ class App extends React.Component {
     this.addRecipe = this.addRecipe.bind(this);
     this.getRecipeList = this.getRecipeList.bind(this);
   }
+
   addRecipe(url, name){
     $.ajax({
       method:'POST',
@@ -49,7 +50,7 @@ class App extends React.Component {
   render () {
     return (<div>
       <h1>The Veggie Cloud!</h1>
-      <Search />
+      <h3>Add a Recipe:</h3>
       <AddRecipe addRecipe={this.addRecipe}/>
       <RecipeList items={this.state.items}/>
     </div>)
